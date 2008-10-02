@@ -8,6 +8,6 @@ Gem::Specification.new do |s|
   s.has_rdoc = true
   s.authors = ["James Smith"]
   s.files = ["README", "COPYING"] 
-  s.files += ['lib/rubymarks.rb']
+  s.files += ['lib/rubymarks.rb', 'lib/rubymarks/services.rb']
   s.files += ['init.rb', 'rails/init.rb']
 end
