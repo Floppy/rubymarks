@@ -17,10 +17,43 @@ Homepage: http://github.com/Floppy/rubymarks
 2) Install gem
     > sudo gem install Floppy-rubymarks
 
-== RAILS
+== RAILS PLUGIN
 
 This gem can be used as a Rails plugin. You can either extract it into
 vendor/plugins, or use the new-style config.gem command in environment.rb. For
 example:
 
     config.gem "Floppy-rubymarks", :lib => "rubymarks", :source => "http://gems.github.com", :version => '>= 0.0.1'
+
+== USAGE
+
+Once you've done that, you can use bookmark_tag in your views and controllers to
+generate an HTML link tag, or bookmark_url to just generate the URL.
+Examples:
+
+    bookmark_url :tinyurl, "http://www.google.com"
+    bookmark_tag :facebook, "http://www.google.com", :title => "Google"
+
+Both functions accepts the following options - not all work with all services.
+
+    :title - a title for the link (string)
+    :text - some explanatory text to go with the link (string)
+    :new_window - open the bookmark link in a new window (true or false)
+
+Services supported are:
+
+    :facebook
+    :digg
+    :delicious
+    :stumbleupon
+    :twitter
+    :reddit
+    :windowslive
+    :google
+    :myaol
+    :magnolia
+    :technorati
+    :newsvine
+    :myspace
+    :tinyurl
+    :snurl
